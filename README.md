@@ -16,13 +16,13 @@
 
 ## ⚡ About Me
 
-I'm **𝕼𝖚𝖆𝖓𝖙𝖚𝖒𝕿𝖊𝖈𝖍𝕮𝖔𝖉𝖊𝖗** — a ridiculously technical person who enjoys building software, exploring systems, automating everything possible, experimenting with AI, and understanding technology from the inside out.
+I'm **𝕼𝖚𝖆𝖓𝖙𝖚𝖒𝕿𝖊𝖈𝖍𝕮𝖔𝖉𝖊𝖗** — a technical person (basically technician and coder and hacker) who enjoys building software, exploring systems, ethical hacking, cybersec, pentesting, automating everything possible, experimenting with AI, and understanding technology from the inside out.
 
 **Coder · Ethical Hacker · Technician · Software Hacker · AI Engineer · Systems Explorer**
 
 > 🖥️ **Terminal is home.**
 > ⚙️ **Antigravity is the workspace.**
-> ⌨️ **CLI is love.**
+> ⌨️ **CLI is life.**
 
 ---
 
