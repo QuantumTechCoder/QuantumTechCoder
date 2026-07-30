@@ -62,7 +62,7 @@ I'm **𝕼𝖚𝖆𝖓𝖙𝖚𝖒𝕿𝖊𝖈𝖍𝕮𝖔𝖉𝖊𝖗** — a t
 ├─────────────────────────────────────────────┤
 │ MODE        :: ENGINEERING                  │
 │ TERMINAL    :: HOME                         │
-│ CLI         :: LOVE                         │
+│ CLI         :: LIFE                         │
 │ WORKSPACE   :: ANTIGRAVITY                  │
 │ CURIOSITY   :: ∞                            │
 │ PROJECTS    :: ACTIVE                       │
@@ -74,7 +74,7 @@ I'm **𝕼𝖚𝖆𝖓𝖙𝖚𝖒𝕿𝖊𝖈𝖍𝕮𝖔𝖉𝖊𝖗** — a t
 
 ## 🧬 Philosophy
 
-```text
+```ini
 BUILD
   ↓
 BREAK
