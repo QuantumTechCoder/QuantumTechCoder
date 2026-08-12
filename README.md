@@ -115,10 +115,18 @@ I'm **𝕼𝖚𝖆𝖓𝖙𝖚𝖒𝕿𝖊𝖈𝖍𝕮𝖔𝖉𝖊𝖗** — a t
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=QuantumTechCoder&show_icons=true&theme=transparent&hide_border=true" height="170">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=QuantumTechCoder&layout=compact&theme=transparent&hide_border=true" height="170">
+  <img src="https://quantum-github-stats.quantumtechcoder.workers.dev/general?username=QuantumTechCoder" height="170" />
+  <img src="https://quantum-github-stats.quantumtechcoder.workers.dev/langs?username=QuantumTechCoder" height="170" />
 </p>
 
+<p align="center">
+  <img src="https://quantum-github-stats.quantumtechcoder.workers.dev/contribution?username=QuantumTechCoder" height="170" />
+</p>
+
+<p align="center">
+  <img src="https://quantum-github-stats.quantumtechcoder.workers.dev/customgraph/general?username=QuantumTechCoder" height="170" />
+  <img src="https://quantum-github-stats.quantumtechcoder.workers.dev/customgraph/langs?username=QuantumTechCoder" height="170" />
+</p>
 ---
 
 ## ⚙️ System Status
