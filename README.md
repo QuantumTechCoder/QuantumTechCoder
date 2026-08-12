@@ -113,19 +113,8 @@ I'm **𝕼𝖚𝖆𝖓𝖙𝖚𝖒𝕿𝖊𝖈𝖍𝕮𝖔𝖉𝖊𝖗** — a t
 ---
 
 ## 📊 GitHub Stats
-
 <p align="center">
-  <img src="https://quantum-github-stats.quantumtechcoder.workers.dev/general?username=QuantumTechCoder" height="180" />
-  <img src="https://quantum-github-stats.quantumtechcoder.workers.dev/langs?username=QuantumTechCoder" height="180" />
-</p>
-
-<p align="center">
-  <img src="https://quantum-github-stats.quantumtechcoder.workers.dev/contribution?username=QuantumTechCoder" height="180" />
-</p>
-
-<p align="center">
-  <img src="https://quantum-github-stats.quantumtechcoder.workers.dev/customgraph/general?username=QuantumTechCoder" height="180" />
-  <img src="https://quantum-github-stats.quantumtechcoder.workers.dev/customgraph/langs?username=QuantumTechCoder" height="180" />
+  <img src="https://quantum-github-stats.quantumtechcoder.workers.dev/combinedstats/all?username=QuantumTechCoder" />
 </p>
 ---
 
