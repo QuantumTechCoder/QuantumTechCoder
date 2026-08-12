@@ -1,6 +1,6 @@
 # 👋 Hi, I'm <img src="./qtc.png" alt="QuantumTechCoder" width="50" align="top"> **𝕼𝖚𝖆𝖓𝖙𝖚𝖒𝕿𝖊𝖈𝖍𝕮𝖔𝖉𝖊𝖗**
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code\&size=22\&pause=900\&color=00F7FF\&center=true\&vCenter=true\&width=700\&lines=Ultimate+Techspert;Ethical+Hacker+%7C+Coder+%7C+Technician;Software+Hacker+%7C+AI+Engineer;Terminal+is+home.;CLI+is+love.)](https://github.com/QuantumTechCoder)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code\&size=22\&pause=900\&color=00F7FF\&center=true\&vCenter=true\&width=700\&lines=Ultimate+Techspert;Ethical+Hacker+%7C+Coder+%7C+Technician;Software+Hacker+%7C+AI+Engineer;Terminal+is+home.;CLI+is+my+affiliate.)](https://github.com/QuantumTechCoder)
 
 ---
 
@@ -22,7 +22,7 @@ I'm **𝕼𝖚𝖆𝖓𝖙𝖚𝖒𝕿𝖊𝖈𝖍𝕮𝖔𝖉𝖊𝖗** — a t
 
 > 🖥️ **Terminal is home.**
 > ⚙️ **Antigravity is the workspace.**
-> ⌨️ **CLI is life.**
+> ⌨️ **Coding is life.**
 
 ---
 
