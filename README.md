@@ -13,6 +13,40 @@
 </a> 
 
 ---
+<table>
+<tr>
+<td bgcolor="#0C1017">
+<pre><code><font color="#4B70A2">..............</font>                                  <b><font color="#FF5555">root</font><font color="#FFFFFF">@</font><font color="#FF5555">kali</font></b>
+            <font color="#4B70A2">..,;:ccc,.</font>                          <font color="#FFFFFF">---------</font>
+          <font color="#4B70A2">......''';lxO.</font>                        <b><font color="#FF5555">OS</font></b>: <font color="#FFFFFF">Kali GNU/Linux Rolling x86_64</font>
+<font color="#4B70A2">.....''''..........,:ld;</font>                        <b><font color="#FF5555">Host</font></b>: <font color="#FFFFFF">MSI MAG B650 TOMAHAWK WIFI (MS-7D74)</font>
+           <font color="#4B70A2">';;;:::;,,.x,</font>                       <b><font color="#FF5555">Kernel</font></b>: <font color="#FFFFFF">5.10.0-kali7-amd64</font>
+      <font color="#4B70A2">..'''.</font>            <font color="#4B70A2">0Xxoc:,.  ...</font>           <b><font color="#FF5555">Uptime</font></b>: <font color="#FFFFFF">3 hours, 14 mins</font>
+  <font color="#4B70A2">....</font>                <font color="#4B70A2">,ONkc;,;cokOdc',.</font>         <b><font color="#FF5555">Packages</font></b>: <font color="#FFFFFF">2914 (dpkg)</font>
+ <font color="#4B70A2">.</font>                   <font color="#4B70A2">OMo           ':$2dd$1o.</font>   <b><font color="#FF5555">Shell</font></b>: <font color="#FFFFFF">bash 5.0.16</font>
+                    <font color="#4B70A2">dMc               :OO;</font>      <b><font color="#FF5555">Resolution</font></b>: <font color="#FFFFFF">2560x1440</font>
+                    <font color="#4B70A2">0M.                 .:o.</font>    <b><font color="#FF5555">DE</font></b>: <font color="#FFFFFF">Xfce 4.16</font>
+                    <font color="#4B70A2">;Wd</font>                         <b><font color="#FF5555">WM</font></b>: <font color="#FFFFFF">Xfwm4</font>
+                     <font color="#4B70A2">;XO,</font>                       <b><font color="#FF5555">WM Theme</font></b>: <font color="#FFFFFF">Kali-Dark</font>
+                       <font color="#4B70A2">,d0Odlc;,..</font>              <b><font color="#FF5555">Terminal</font></b>: <font color="#FFFFFF">qterminal</font>
+                           <font color="#4B70A2">..',;:cdOOd::,.</font>      <b><font color="#FF5555">CPU</font></b>: <font color="#FFFFFF">AMD Ryzen 7 7800X3D (8) @ 4.200GHz</font>
+                                    <font color="#4B70A2">.:d;.':;.</font>   <b><font color="#FF5555">GPU</font></b>: <font color="#FFFFFF">NVIDIA GeForce RTX 4090</font>
+                                       <font color="#4B70A2">'d,  .'</font>  <b><font color="#FF5555">Memory</font></b>: <font color="#FFFFFF">4118MiB / 15942MiB (25%)</font>
+                                         <font color="#4B70A2">;l   ..</font> <b><font color="#FF5555">Disk (/)</font></b>: <font color="#FFFFFF">342GiB / 1862GiB (18%)</font>
+                                          <font color="#4B70A2">.o</font>
+                                            <font color="#4B70A2">c</font>   <font color="#000000">░░░</font><font color="#FF5555">░░░</font><font color="#55FF55">░░░</font><font color="#FFFF55">░░░</font><font color="#5555FF">░░░</font><font color="#FF55FF">░░░</font><font color="#55FFFF">░░░</font><font color="#FFFFFF">░░░</font>
+                                            <font color="#4B70A2">.'</font>
+                                             <font color="#4B70A2">.</font>
+
+<font color="#FF5555">┌──(</font><b><font color="#FF5555">root㉿kali</font></b><font color="#FF5555">)-[</font><font color="#FFFFFF">/root</font><font color="#FF5555">]</font>
+<font color="#FF5555">└─#</font> <font color="#FFFFFF">whoami</font>
+QuantumTechCoder Official - Coder Hacker Tech Expert AI Orchestration
+
+<font color="#FF5555">┌──(</font><b><font color="#FF5555">root㉿kali</font></b><font color="#FF5555">)-[</font><font color="#FFFFFF">/root</font><font color="#FF5555">]</font>
+<font color="#FF5555">└─#</font> █</code></pre>
+</td>
+</tr>
+</table>
 
 ## ⚡ About Me
 
