@@ -1,0 +1,54 @@
+name: Update Neofetch Terminal Graphic
+
+on:
+  schedule:
+    # 00:00 IST on Jan 1st is 18:30 UTC on Dec 31st
+    - cron: '30 18 31 12 *'
+  workflow_dispatch: # Allows manual trigger from GitHub Actions tab
+
+jobs:
+  build-and-update:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write # Needed to commit changes back to repo root
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies (resvg & ImageMagick)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cargo imagemagick
+          cargo install resvg
+
+      - name: Generate SVG
+        run: |
+          python kali_terminal_svg_maker.py
+
+      - name: Convert SVG to PNG and resize dimensions by 40%
+        run: |
+          # 1. Render high-quality PNG from SVG
+          ~/.cargo/bin/resvg neofetch.svg raw_temp.png
+          
+          # 2. Resize PNG dimensions by 40% smaller (to 60% original dimensions)
+          convert raw_temp.png -resize 60% kali_term.png
+          
+          # Clean up temporary file
+          rm raw_temp.png
+
+      - name: Commit and Push Updated SVG and PNG
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          git add neofetch.svg kali_term.png
+          
+          # Only commit if files actually changed
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto-update neofetch SVG and PNG assets" && git push)
