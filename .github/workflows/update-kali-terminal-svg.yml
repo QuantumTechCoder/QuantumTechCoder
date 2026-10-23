@@ -22,10 +22,10 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install dependencies (resvg & ImageMagick)
+      - name: Install dependencies, tools, and Fira Code font
         run: |
           sudo apt-get update
-          sudo apt-get install -y cargo imagemagick
+          sudo apt-get install -y cargo imagemagick fonts-firacode
           cargo install resvg
 
       - name: Generate SVG
@@ -34,7 +34,7 @@ jobs:
 
       - name: Convert SVG to PNG and resize dimensions by 40%
         run: |
-          # 1. Render high-quality PNG from SVG
+          # 1. Render high-quality PNG from SVG (now with local Fira Code font available)
           ~/.cargo/bin/resvg neofetch.svg raw_temp.png
           
           # 2. Resize PNG dimensions by 40% smaller (to 60% original dimensions)
