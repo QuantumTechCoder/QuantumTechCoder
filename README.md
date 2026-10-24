@@ -30,7 +30,7 @@ I'm **𝕼𝖚𝖆𝖓𝖙𝖚𝖒𝕿𝖊𝖈𝖍𝕮𝖔𝖉𝖊𝖗** — a t
 
 ## 🛠️ Skills & Technologies
 
-</a><a href="https://skillicons.dev">
+</a><a href="https://quantumtechcoder.is-a.dev/about/">
   <img src="https://skillicons.dev/icons?i=html,css,tailwind,bootstrap,js,ts,react,nextjs,svelte,threejs,wasm,python,nodejs,express,php,java,dotnet,cpp,rust,perl,regex,sqlite,postgres,mongodb,firebase,supabase,vscode,androidstudio,postman,blender,git,github,npm,webpack,vite,cloudflare,aws,gcp,docker,k8s,nginx,selenium,raspberrypi,arduino,linux,ubuntu,debian,arch,kali,windows" />
 </a>
 
