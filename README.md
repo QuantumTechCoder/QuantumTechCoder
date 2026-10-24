@@ -47,12 +47,6 @@ I'm **𝕼𝖚𝖆𝖓𝖙𝖚𝖒𝕿𝖊𝖈𝖍𝕮𝖔𝖉𝖊𝖗** — a t
 
 ---
 
-## 📊 GitHub Stats
-<p align="center">
-  <img src="https://quantum-github-stats.quantumtechcoder.workers.dev/combinedstats/all?username=QuantumTechCoder" />
-</p>
----
-
 ## ⚙️ System Status
 
 ```text
