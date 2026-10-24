@@ -85,23 +85,9 @@ I'm **𝕼𝖚𝖆𝖓𝖙𝖚𝖒𝕿𝖊𝖈𝖍𝕮𝖔𝖉𝖊𝖗** — a t
 </a>
 <a href="https://www.adobe.com/products/photoshop.html" target="_blank" rel="noreferrer">
   <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/photoshop-colored.svg" width="36" height="36" alt="Photoshop" />
+</a><a href="https://skillicons.dev">
+  <img src="https://skillicons.dev/icons?i=html,css,tailwind,bootstrap,js,ts,react,nextjs,svelte,threejs,wasm,python,nodejs,express,php,java,dotnet,cpp,rust,perl,regex,sqlite,postgres,mongodb,firebase,supabase,vscode,androidstudio,postman,blender,ps,git,github,npm,webpack,vite,cloudflare,aws,gcp,digitalocean,heroku,docker,k8s,nginx,selenium,android,raspberrypi,arduino,linux,ubuntu,debian,arch,kali,windows" />
 </a>
-<a href="https://cloud.google.com/" target="_blank" rel="noreferrer">
-  <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/googlecloud-colored.svg" width="36" height="36" alt="Google Cloud" />
-</a>
-<a href="https://dotnet.microsoft.com/" target="_blank" rel="noreferrer">
-  <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/dot-net-colored.svg" width="36" height="36" alt=".NET" />
-</a>
-<a href="https://aws.amazon.com/" target="_blank" rel="noreferrer">
-  <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/aws-colored.svg" width="36" height="36" alt="Amazon Web Services" />
-</a>
-<a href="https://www.blender.org/" target="_blank" rel="noreferrer">
-  <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/blender-colored.svg" width="36" height="36" alt="Blender" />
-</a>
-<a href="https://www.digitalocean.com/" target="_blank" rel="noreferrer">
-  <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/digitalocean-colored.svg" width="36" height="36" alt="DigitalOcean" />
-</a>
-
 
 ### 🧠 Areas
 
