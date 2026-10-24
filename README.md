@@ -13,36 +13,7 @@
 </a> 
 
 ---
-```diff
-! ..............                                  root@kali
-!             ..,;:ccc,.                          ---------
-!           ......''';lxO.                        OS: Kali GNU/Linux Rolling x86_64
-! .....''''..........,:ld;                        Host: MSI MAG B650 TOMAHAWK WIFI (MS-7D74)
-!            .';;;:::;,,.x,                       Kernel: 5.10.0-kali7-amd64
-!       ..'''.            0Xxoc:,.  ...           Uptime: 3 hours, 14 mins
-!   ....                ,ONkc;,;cokOdc',.         Packages: 2914 (dpkg)
-!  .                   OMo           ':\$2dd\$1o.   Shell: bash 5.0.16
-!                     dMc               :OO;      Resolution: 2560x1440
-!                     0M.                 .:o.    DE: Xfce 4.16
-!                     ;Wd                         WM: Xfwm4
-!                      ;XO,                       WM Theme: Kali-Dark
-!                        ,d0Odlc;,..              Terminal: qterminal
-!                            ..',;:cdOOd::,.      CPU: AMD Ryzen 7 7800X3D (8) @ 4.200GHz
-!                                     .:d;.':;.   GPU: NVIDIA GeForce RTX 4090
-!                                        'd,  .'  Memory: 4118MiB / 15942MiB (25%)
-!                                          ;l   .. Disk (/): 342GiB / 1862GiB (18%)
-!                                           .o
-!                                             c   [ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ]
-!                                             .'
-!                                              .
-
-- ┌──(root㉿kali)-[/root]
-- └─# whoami
-+ QuantumTechCoder Official - Coder Hacker Tech Expert AI Orchestration
-
-- ┌──(root㉿kali)-[/root]
-- └─# █
-```
+![Kali Neofetch Badge](neofetch.svg)
 
 
 ## ⚡ About Me
