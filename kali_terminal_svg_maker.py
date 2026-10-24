@@ -138,7 +138,7 @@ svg_template = f"""<svg xmlns="http://www.w3.org/2000/svg" width="1550" height="
     @import url('https://fonts.googleapis.com/css2?family=Fira+Code&amp;display=swap');
     
     .bg {{ fill: #0d1117; color: #0d1117; }}
-    .text {{ font-family: 'Fira Code', monospace; font-size: 11px; }}
+    .text {{ font-family: 'Fira Code', monospace; font-size: 16px; }}
     .specs {{ font-family: 'Fira Code', monospace; font-size: 16px; }}
     .kali {{ fill: #0088cc; }}
     .header {{ fill: #ffffff; font-weight: bold; }}
