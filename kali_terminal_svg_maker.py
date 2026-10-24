@@ -110,7 +110,7 @@ def parse_ascii_line(line):
     return "".join(result)
 
 svg_lines = []
-start_y = 65
+start_y = 95
 line_height = 13
 
 for i, line_str in enumerate(ascii_art):
@@ -118,8 +118,7 @@ for i, line_str in enumerate(ascii_art):
     art_svg = parse_ascii_line(line_str)
     svg_lines.append(f'  <text x="20" y="{y}" class="text" xml:space="preserve">{art_svg}</text>')
 
-# Specs configuration: 1.5x font size (16px), double line gap (36px spacing), pushed right to x="760"
-spec_start_y = 75
+spec_start_y = 105
 spec_line_height = 36
 spec_x = 760
 
@@ -131,14 +130,17 @@ for idx, spec_html in enumerate(specs):
 
 ascii_block = "\n".join(svg_lines)
 specs_block = "\n".join(spec_lines)
-total_height = max(start_y + len(ascii_art) * line_height + 100, spec_start_y + len(specs) * spec_line_height + 100)
+
+# Calculate total height based on ASCII art and bottom elements
+bottom_start_y = max(start_y + len(ascii_art) * line_height, spec_start_y + len(specs) * spec_line_height) + 50
+total_height = bottom_start_y + 160
 
 svg_template = f"""<svg xmlns="http://www.w3.org/2000/svg" width="1550" height="{total_height}" viewBox="0 0 1550 {total_height}">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Fira+Code&amp;display=swap');
     
     .bg {{ fill: #0d1117; color: #0d1117; }}
-    .text {{ font-family: 'Fira Code', monospace; font-size: 16px; }}
+    .text {{ font-family: 'Fira Code', monospace; font-size: 11px; }}
     .specs {{ font-family: 'Fira Code', monospace; font-size: 16px; }}
     .kali {{ fill: #0088cc; }}
     .header {{ fill: #ffffff; font-weight: bold; }}
@@ -152,22 +154,22 @@ svg_template = f"""<svg xmlns="http://www.w3.org/2000/svg" width="1550" height="
 
   <rect width="100%" height="100%" rx="8" class="bg" />
 
-  <text x="20" y="25" class="text prompt" xml:space="preserve">┌──(root㉿kali)-[/root]</text>
-  <text x="20" y="40" class="text" xml:space="preserve"><tspan class="prompt">└─# </tspan><tspan class="command">neofetch</tspan></text>
+  <text x="20" y="35" class="specs prompt" xml:space="preserve">┌──(root㉿kali)-[/root]</text>
+  <text x="20" y="68" class="specs" xml:space="preserve"><tspan class="prompt">└─# </tspan><tspan class="command">neofetch</tspan></text>
   
 {ascii_block}
 
 {specs_block}
 
-  <text x="20" y="{total_height - 65}" class="text prompt" xml:space="preserve">┌──(root㉿kali)-[/root]</text>
-  <text x="20" y="{total_height - 50}" class="text" xml:space="preserve"><tspan class="prompt">└─# </tspan><tspan class="command">whoami</tspan></text>
-  <text x="20" y="{total_height - 35}" class="text output" xml:space="preserve">QuantumTechCoder Official - Coder Hacker Tech Expert AI Orchestration</text>
-  <text x="20" y="{total_height - 15}" class="text prompt" xml:space="preserve">┌──(root㉿kali)-[/root]</text>
-  <text x="20" y="{total_height - 2}" class="text" xml:space="preserve"><tspan class="prompt">└─# </tspan><tspan class="cursor">█</tspan></text>
+  <text x="20" y="{bottom_start_y}" class="specs prompt" xml:space="preserve">┌──(root㉿kali)-[/root]</text>
+  <text x="20" y="{bottom_start_y + 33}" class="specs" xml:space="preserve"><tspan class="prompt">└─# </tspan><tspan class="command">whoami</tspan></text>
+  <text x="20" y="{bottom_start_y + 66}" class="specs output" xml:space="preserve">QuantumTechCoder Official - Coder Hacker Tech Expert AI Orchestration</text>
+  <text x="20" y="{bottom_start_y + 99}" class="specs prompt" xml:space="preserve">┌──(root㉿kali)-[/root]</text>
+  <text x="20" y="{bottom_start_y + 132}" class="specs" xml:space="preserve"><tspan class="prompt">└─# </tspan><tspan class="cursor">█</tspan></text>
 </svg>
 """
 
 with open("neofetch.svg", "w", encoding="utf-8") as f:
     f.write(svg_template)
 
-print("Successfully generated perfectly proportioned neofetch.svg!")
+print("Successfully updated kali_terminal_svg_maker.py with uniform large prompt/command font sizes!")
