@@ -89,10 +89,6 @@ REPEAT
 
 **Turning unreasonable technical ideas into working systems.**
 
-***Talk is cheap, Show me the code***
-
-**- Linus Torvalds**
-
-  **Founder, Linux**
+***"Talk is cheap, Show me the code"***\n**- Linus Torvalds**\n  **Founder, Linux**
 
 </p>
