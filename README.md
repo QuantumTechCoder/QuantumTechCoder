@@ -87,10 +87,10 @@ REPEAT
 
 ### `⚡ 𝕼𝖚𝖆𝖓𝖙𝖚𝖒𝕿𝖊𝖈𝖍𝕮𝖔𝖉𝖊𝖗`
 
-**Turning unreasonable technical ideas into working systems.**
-```c
 ***"Talk is cheap, Show me the code"***
+
 **- Linus Torvalds**
+
   **Founder, Linux**
-```
+
 </p>
