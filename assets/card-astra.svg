@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 160" width="100%" height="160">
+  <defs>
+    <linearGradient id="cardBg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080e1a" />
+      <stop offset="100%" stop-color="#04070d" />
+    </linearGradient>
+    <linearGradient id="glowBorder3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#bd93f9" />
+      <stop offset="100%" stop-color="#ff79c6" />
+    </linearGradient>
+  </defs>
+
+  <rect x="2" y="2" width="416" height="156" rx="10" fill="url(#cardBg3)" stroke="url(#glowBorder3)" stroke-width="1.5" />
+
+  <!-- Header & Icon -->
+  <g transform="translate(20, 28)">
+    <circle cx="10" cy="0" r="10" fill="#bd93f9" fill-opacity="0.15" />
+    <text x="10" y="4" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#bd93f9">🌐</text>
+    <text x="30" y="5" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="16" fill="#ffffff">AstraForxBrowser</text>
+    
+    <!-- Badge -->
+    <rect x="240" y="-12" width="125" height="20" rx="4" fill="#221538" stroke="#bd93f9" stroke-width="1" />
+    <text x="302" y="2" text-anchor="middle" font-family="'Fira Code', monospace" font-size="9" fill="#bd93f9" font-weight="bold">CYBERPUNK DESKTOP</text>
+  </g>
+
+  <!-- Description -->
+  <text x="20" y="66" font-family="'Segoe UI', sans-serif" font-size="11.5" fill="#a0aec0">
+    High-octane browser engineered for power users. Obsidian dark aesthetic,
+  </text>
+  <text x="20" y="84" font-family="'Segoe UI', sans-serif" font-size="11.5" fill="#a0aec0">
+    CLI omnibox, isolated incognito workspaces &amp; void-runner minigame.
+  </text>
+
+  <!-- Tech Stack Pills -->
+  <g transform="translate(20, 116)" font-family="'Fira Code', monospace" font-size="10">
+    <rect x="0" y="0" width="65" height="20" rx="4" fill="#1b1229" stroke="#3d285c" stroke-width="1" />
+    <text x="32" y="14" text-anchor="middle" fill="#d1b3ff">Electron</text>
+
+    <rect x="73" y="0" width="75" height="20" rx="4" fill="#1b1229" stroke="#3d285c" stroke-width="1" />
+    <text x="110" y="14" text-anchor="middle" fill="#d1b3ff">Chromium</text>
+
+    <rect x="156" y="0" width="80" height="20" rx="4" fill="#1b1229" stroke="#3d285c" stroke-width="1" />
+    <text x="196" y="14" text-anchor="middle" fill="#d1b3ff">JavaScript</text>
+
+    <rect x="244" y="0" width="55" height="20" rx="4" fill="#1b1229" stroke="#3d285c" stroke-width="1" />
+    <text x="271" y="14" text-anchor="middle" fill="#ff79c6">CyberUI</text>
+
+    <rect x="307" y="0" width="50" height="20" rx="4" fill="#1b1229" stroke="#3d285c" stroke-width="1" />
+    <text x="332" y="14" text-anchor="middle" fill="#00f7ff">CLI</text>
+  </g>
+</svg>

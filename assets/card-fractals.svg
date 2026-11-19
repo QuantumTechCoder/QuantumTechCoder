@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 160" width="100%" height="160">
+  <defs>
+    <linearGradient id="cardBg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080e1a" />
+      <stop offset="100%" stop-color="#04070d" />
+    </linearGradient>
+    <linearGradient id="glowBorder1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f7ff" />
+      <stop offset="100%" stop-color="#7928ca" />
+    </linearGradient>
+  </defs>
+
+  <rect x="2" y="2" width="416" height="156" rx="10" fill="url(#cardBg1)" stroke="url(#glowBorder1)" stroke-width="1.5" />
+
+  <!-- Header & Icon -->
+  <g transform="translate(20, 28)">
+    <circle cx="10" cy="0" r="10" fill="#00f7ff" fill-opacity="0.15" />
+    <text x="10" y="4" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#00f7ff">⚡</text>
+    <text x="30" y="5" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="16" fill="#ffffff">FantasticFractals</text>
+    
+    <!-- Badge -->
+    <rect x="260" y="-12" width="105" height="20" rx="4" fill="#15263f" stroke="#00f7ff" stroke-width="1" />
+    <text x="312" y="2" text-anchor="middle" font-family="'Fira Code', monospace" font-size="9" fill="#00f7ff" font-weight="bold">60 FPS WEBGL</text>
+  </g>
+
+  <!-- Description -->
+  <text x="20" y="66" font-family="'Segoe UI', sans-serif" font-size="11.5" fill="#a0aec0" width="380">
+    Blazing fast real-time mathematical fractal visualizer (WebGL 2.0
+  </text>
+  <text x="20" y="84" font-family="'Segoe UI', sans-serif" font-size="11.5" fill="#a0aec0">
+    &amp; React) with Python scientific computation library &amp; 16K export.
+  </text>
+
+  <!-- Tech Stack Pills -->
+  <g transform="translate(20, 116)" font-family="'Fira Code', monospace" font-size="10">
+    <rect x="0" y="0" width="70" height="20" rx="4" fill="#0c1829" stroke="#1f375b" stroke-width="1" />
+    <text x="35" y="14" text-anchor="middle" fill="#8be9fd">WebGL 2.0</text>
+
+    <rect x="78" y="0" width="55" height="20" rx="4" fill="#0c1829" stroke="#1f375b" stroke-width="1" />
+    <text x="105" y="14" text-anchor="middle" fill="#8be9fd">React</text>
+
+    <rect x="140" y="0" width="55" height="20" rx="4" fill="#0c1829" stroke="#1f375b" stroke-width="1" />
+    <text x="167" y="14" text-anchor="middle" fill="#8be9fd">NumPy</text>
+
+    <rect x="202" y="0" width="60" height="20" rx="4" fill="#0c1829" stroke="#1f375b" stroke-width="1" />
+    <text x="232" y="14" text-anchor="middle" fill="#8be9fd">Python</text>
+
+    <rect x="270" y="0" width="60" height="20" rx="4" fill="#0c1829" stroke="#1f375b" stroke-width="1" />
+    <text x="300" y="14" text-anchor="middle" fill="#50fa7b">Shaders</text>
+  </g>
+</svg>
