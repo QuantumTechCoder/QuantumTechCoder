@@ -1,51 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 160" width="100%" height="160">
-  <defs>
-    <linearGradient id="cardBg1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#080e1a" />
-      <stop offset="100%" stop-color="#04070d" />
-    </linearGradient>
-    <linearGradient id="glowBorder1" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f7ff" />
-      <stop offset="100%" stop-color="#7928ca" />
-    </linearGradient>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="200" viewBox="0 0 440 200" role="img">
 
-  <rect x="2" y="2" width="416" height="156" rx="10" fill="url(#cardBg1)" stroke="url(#glowBorder1)" stroke-width="1.5" />
+<defs>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#00d9ff" stroke-opacity=".05"/></pattern>
+<filter id="glow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="4"/></filter>
+<filter id="sglow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2"/></filter>
+<pattern id="scan" width="4" height="3" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" fill-opacity=".2"/></pattern>
+</defs>
 
-  <!-- Header & Icon -->
-  <g transform="translate(20, 28)">
-    <circle cx="10" cy="0" r="10" fill="#00f7ff" fill-opacity="0.15" />
-    <text x="10" y="4" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#00f7ff">⚡</text>
-    <text x="30" y="5" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="16" fill="#ffffff">FantasticFractals</text>
-    
-    <!-- Badge -->
-    <rect x="260" y="-12" width="105" height="20" rx="4" fill="#15263f" stroke="#00f7ff" stroke-width="1" />
-    <text x="312" y="2" text-anchor="middle" font-family="'Fira Code', monospace" font-size="9" fill="#00f7ff" font-weight="bold">60 FPS WEBGL</text>
-  </g>
 
-  <!-- Description -->
-  <text x="20" y="66" font-family="'Segoe UI', sans-serif" font-size="11.5" fill="#a0aec0" width="380">
-    Blazing fast real-time mathematical fractal visualizer (WebGL 2.0
-  </text>
-  <text x="20" y="84" font-family="'Segoe UI', sans-serif" font-size="11.5" fill="#a0aec0">
-    &amp; React) with Python scientific computation library &amp; 16K export.
-  </text>
+<style>
+text { font-family: 'Fira Code', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+.dim { fill: #6272a4; }
+.cy { fill: #00d9ff; }
+.fg { fill: #f8f8f2; }
+.gr { fill: #50fa7b; }
+.pk { fill: #ff79c6; }
+.pp { fill: #bd93f9; }
+.yl { fill: #f1fa8c; }
+@keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .3; } }
+@keyframes gm { 0%, 92%, 100% { transform: translate(0,0); } 93% { transform: translate(4px,-1px); } 95% { transform: translate(-3px,1px); } 97% { transform: translate(2px,0); } }
+@keyframes gc { 0%, 92%, 100% { transform: translate(0,0); } 93% { transform: translate(-4px,1px); } 95% { transform: translate(3px,-1px); } 97% { transform: translate(-2px,0); } }
+.cursor { animation: blink 1.05s step-end infinite; }
+.dot { animation: pulse 2s ease-in-out infinite; }
+.gm { animation: gm 5s linear 1s infinite; }
+.gc { animation: gc 5s linear 1s infinite; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
 
-  <!-- Tech Stack Pills -->
-  <g transform="translate(20, 116)" font-family="'Fira Code', monospace" font-size="10">
-    <rect x="0" y="0" width="70" height="20" rx="4" fill="#0c1829" stroke="#1f375b" stroke-width="1" />
-    <text x="35" y="14" text-anchor="middle" fill="#8be9fd">WebGL 2.0</text>
+<rect x="8" y="6" width="424" height="188" rx="8" fill="#050811" stroke="#00d9ff" stroke-width="1.5" stroke-opacity=".8"/>
 
-    <rect x="78" y="0" width="55" height="20" rx="4" fill="#0c1829" stroke="#1f375b" stroke-width="1" />
-    <text x="105" y="14" text-anchor="middle" fill="#8be9fd">React</text>
+<!-- Header -->
+<text x="24" y="38" fill="#ffffff" font-weight="bold" font-size="17">FantasticFractals</text>
+<rect x="290" y="22" width="126" height="22" rx="4" fill="#00d9ff" fill-opacity=".12" stroke="#00d9ff" stroke-width="1"/>
+<text x="353" y="37" text-anchor="middle" fill="#00d9ff" font-weight="bold" font-size="9.5">60 FPS WEBGL</text>
 
-    <rect x="140" y="0" width="55" height="20" rx="4" fill="#0c1829" stroke="#1f375b" stroke-width="1" />
-    <text x="167" y="14" text-anchor="middle" fill="#8be9fd">NumPy</text>
+<!-- Descriptions -->
+<text x="24" y="74" fill="#a0aec0" font-size="12">Real-time mathematical fractal visualizer (WebGL 2.0 &amp; React)</text>
+<text x="24" y="96" fill="#a0aec0" font-size="12">Scientific library with NumPy computation &amp; 16K export.</text>
 
-    <rect x="202" y="0" width="60" height="20" rx="4" fill="#0c1829" stroke="#1f375b" stroke-width="1" />
-    <text x="232" y="14" text-anchor="middle" fill="#8be9fd">Python</text>
+<!-- Tech Stack -->
+<g transform="translate(24, 142)">
 
-    <rect x="270" y="0" width="60" height="20" rx="4" fill="#0c1829" stroke="#1f375b" stroke-width="1" />
-    <text x="300" y="14" text-anchor="middle" fill="#50fa7b">Shaders</text>
-  </g>
+        <rect x="0" y="0" width="51" height="20" rx="4" fill="#08101e" stroke="#1d2e47" stroke-width="1"/>
+        <text x="25.5" y="14" text-anchor="middle" fill="#8be9fd" font-size="10">WebGL</text>
+        
+        <rect x="59" y="0" width="51" height="20" rx="4" fill="#08101e" stroke="#1d2e47" stroke-width="1"/>
+        <text x="84.5" y="14" text-anchor="middle" fill="#8be9fd" font-size="10">React</text>
+        
+        <rect x="118" y="0" width="51" height="20" rx="4" fill="#08101e" stroke="#1d2e47" stroke-width="1"/>
+        <text x="143.5" y="14" text-anchor="middle" fill="#8be9fd" font-size="10">NumPy</text>
+        
+        <rect x="177" y="0" width="58" height="20" rx="4" fill="#08101e" stroke="#1d2e47" stroke-width="1"/>
+        <text x="206.0" y="14" text-anchor="middle" fill="#8be9fd" font-size="10">Python</text>
+        
+        <rect x="243" y="0" width="65" height="20" rx="4" fill="#08101e" stroke="#1d2e47" stroke-width="1"/>
+        <text x="275.5" y="14" text-anchor="middle" fill="#8be9fd" font-size="10">Shaders</text>
+        
+</g>
 </svg>
