@@ -1,93 +1,82 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="240" viewBox="0 0 880 240" role="img">
-
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="230" viewBox="0 0 880 230" role="img">
 <defs>
-<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#00d9ff" stroke-opacity=".05"/></pattern>
-<filter id="glow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="4"/></filter>
-<filter id="sglow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2"/></filter>
-<pattern id="scan" width="4" height="3" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" fill-opacity=".2"/></pattern>
+<pattern id="statGrid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#00d9ff" stroke-opacity=".05"/></pattern>
+<filter id="sglow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="3"/></filter>
 </defs>
-
-
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&amp;family=Fira+Code:wght@400;600;700&amp;display=swap');
-text { font-family: 'Fira Code', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
-.brand-orbitron { font-family: 'Orbitron', 'Fira Code', system-ui, sans-serif; font-weight: 900; }
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&amp;display=swap');
+text { font-family: 'Fira Code', 'JetBrains Mono', monospace; }
 .dim { fill: #6272a4; }
-.cy { fill: #00d9ff; }
 .fg { fill: #f8f8f2; }
+.cy { fill: #00d9ff; }
 .gr { fill: #50fa7b; }
 .pk { fill: #ff79c6; }
-.pp { fill: #bd93f9; }
 .yl { fill: #f1fa8c; }
-@keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
-@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .3; } }
-@keyframes gm { 0%, 92%, 100% { transform: translate(0,0); } 93% { transform: translate(3px,-1px); } 95% { transform: translate(-2px,1px); } 97% { transform: translate(1px,0); } }
-@keyframes gc { 0%, 92%, 100% { transform: translate(0,0); } 93% { transform: translate(-3px,1px); } 95% { transform: translate(2px,-1px); } 97% { transform: translate(-1px,0); } }
-.cursor { animation: blink 1.05s step-end infinite; }
-.dot { animation: pulse 2s ease-in-out infinite; }
-.gm { animation: gm 5s linear 1s infinite; }
-.gc { animation: gc 5s linear 1s infinite; }
-@media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
 </style>
 
-<path d="M16 0V240M864 0V240" fill="none" stroke="#00d9ff" stroke-width="2.5" opacity=".35" filter="url(#glow)"/>
-<rect x="16" y="0" width="848" height="240" fill="#03040a"/>
-<rect x="16" y="0" width="848" height="240" fill="url(#grid)"/>
+<!-- Outer Rails and Transparent Margin -->
+<path d="M16 0V230M864 0V230" fill="none" stroke="#00d9ff" stroke-width="2.5" opacity=".35" filter="url(#sglow)"/>
+<rect x="16" y="0" width="848" height="230" fill="#03040a"/>
+<rect x="16" y="0" width="848" height="230" fill="url(#statGrid)"/>
 
 <!-- 4 Telemetry Metric Boxes -->
-<g transform="translate(36, 16)">
+<g transform="translate(36, 14)">
   <!-- Box 1: Contributions -->
-  <rect x="0" y="0" width="190" height="96" rx="8" fill="#060a14" stroke="#00d9ff" stroke-width="1" stroke-opacity=".6"/>
-  <text x="20" y="32" class="dim" font-size="11">CONTRIBUTIONS</text>
-  <text x="20" y="70" fill="#00d9ff" font-weight="bold" font-size="28">2,177+</text>
+  <rect x="0" y="0" width="190" height="92" rx="8" fill="#060a14" stroke="#00d9ff" stroke-width="1.2" stroke-opacity=".7"/>
+  <text x="18" y="28" class="dim" font-size="10.5">CONTRIBUTIONS</text>
+  <text x="18" y="66" fill="#00d9ff" font-weight="bold" font-size="26">2,177</text>
+  <text x="18" y="82" fill="#6272a4" font-size="9.5">ALL-TIME CONTRIBUTIONS</text>
 
-  <!-- Box 2: Commits -->
-  <rect x="206" y="0" width="190" height="96" rx="8" fill="#060a14" stroke="#50fa7b" stroke-width="1" stroke-opacity=".6"/>
-  <text x="226" y="32" class="dim" font-size="11">TOTAL COMMITS</text>
-  <text x="226" y="70" fill="#50fa7b" font-weight="bold" font-size="28">110+</text>
+  <!-- Box 2: Commits & PRs -->
+  <rect x="206" y="0" width="190" height="92" rx="8" fill="#060a14" stroke="#50fa7b" stroke-width="1.2" stroke-opacity=".7"/>
+  <text x="224" y="28" class="dim" font-size="10.5">COMMITS &amp; PRS</text>
+  <text x="224" y="66" fill="#50fa7b" font-weight="bold" font-size="26">110 / 10 PRs</text>
+  <text x="224" y="82" fill="#6272a4" font-size="9.5">PRODUCTION PIPELINE</text>
 
   <!-- Box 3: Streak -->
-  <rect x="412" y="0" width="190" height="96" rx="8" fill="#060a14" stroke="#ff79c6" stroke-width="1" stroke-opacity=".6"/>
-  <text x="432" y="32" class="dim" font-size="11">CURRENT STREAK</text>
-  <text x="432" y="70" fill="#ff79c6" font-weight="bold" font-size="28">🔥 6 Days</text>
+  <rect x="412" y="0" width="190" height="92" rx="8" fill="#060a14" stroke="#ff79c6" stroke-width="1.2" stroke-opacity=".7"/>
+  <text x="430" y="28" class="dim" font-size="10.5">ACTIVITY VELOCITY</text>
+  <text x="430" y="66" fill="#ff79c6" font-weight="bold" font-size="26">🔥 6 Days</text>
+  <text x="430" y="82" fill="#6272a4" font-size="9.5">ACTIVE STREAK</text>
 
-  <!-- Box 4: Stars -->
-  <rect x="618" y="0" width="190" height="96" rx="8" fill="#060a14" stroke="#f1fa8c" stroke-width="1" stroke-opacity=".6"/>
-  <text x="638" y="32" class="dim" font-size="11">REPOSITORIES</text>
-  <text x="638" y="70" fill="#f1fa8c" font-weight="bold" font-size="28">⭐ 15 Public</text>
+  <!-- Box 4: Stars & Repos -->
+  <rect x="618" y="0" width="190" height="92" rx="8" fill="#060a14" stroke="#f1fa8c" stroke-width="1.2" stroke-opacity=".7"/>
+  <text x="636" y="28" class="dim" font-size="10.5">REPOSITORIES</text>
+  <text x="636" y="66" fill="#f1fa8c" font-weight="bold" font-size="26">⭐ 9 / 16 Repos</text>
+  <text x="636" y="82" fill="#6272a4" font-size="9.5">PUBLIC OPEN-SOURCE</text>
 </g>
 
-<!-- Languages Bar -->
-<g transform="translate(36, 134)">
-  <rect width="808" height="88" rx="8" fill="#050811" stroke="#1d2e47" stroke-width="1"/>
-  <text x="20" y="28" fill="#8be9fd" font-size="11" font-weight="bold">TOP SYSTEM STACKS &amp; RATIOS:</text>
+<!-- Languages Breakdown Bar -->
+<g transform="translate(36, 122)">
+  <rect width="808" height="84" rx="8" fill="#050811" stroke="#1d2e47" stroke-width="1"/>
+  <text x="18" y="24" fill="#8be9fd" font-size="11" font-weight="bold">TOP SYSTEM STACKS &amp; RATIOS:</text>
+  <text x="790" y="24" text-anchor="end" fill="#6272a4" font-size="9">// synced: 2026-11-19 14:56 UTC</text>
   
-  <!-- Stack Progress bar -->
-  <rect x="20" y="40" width="768" height="12" rx="6" fill="#141c2b"/>
-  <rect x="20" y="40" width="280" height="12" rx="6" fill="#3178c6"/> <!-- TS -->
-  <rect x="300" y="40" width="210" height="12" rx="0" fill="#3572A5"/> <!-- Python -->
-  <rect x="510" y="40" width="130" height="12" rx="0" fill="#f7df1e"/> <!-- JS -->
-  <rect x="640" y="40" width="80" height="12" rx="0" fill="#f34b7d"/> <!-- C++ -->
-  <rect x="720" y="40" width="68" height="12" rx="6" fill="#dea584"/> <!-- Rust -->
+  <rect x="18" y="36" width="772" height="10" rx="5" fill="#141c2b"/>
+  <rect x="18" y="36" width="280" height="10" rx="5" fill="#3178c6"/> <!-- TS -->
+  <rect x="298" y="36" width="210" height="10" rx="0" fill="#3572A5"/> <!-- Python -->
+  <rect x="508" y="36" width="130" height="10" rx="0" fill="#f7df1e"/> <!-- JS -->
+  <rect x="638" y="36" width="80" height="10" rx="0" fill="#e34c26"/> <!-- HTML -->
+  <rect x="718" y="36" width="72" height="10" rx="5" fill="#dea584"/> <!-- Rust/C++ -->
 
   <!-- Legend -->
-  <g transform="translate(20, 72)" font-size="10.5">
-    <circle cx="5" cy="-4" r="4" fill="#3178c6"/>
+  <g transform="translate(18, 66)" font-size="10">
+    <circle cx="5" cy="-4" r="3.5" fill="#3178c6"/>
     <text x="14" y="0" class="fg">TypeScript 36%</text>
 
-    <circle cx="160" cy="-4" r="4" fill="#3572A5"/>
+    <circle cx="160" cy="-4" r="3.5" fill="#3572A5"/>
     <text x="170" y="0" class="fg">Python 27%</text>
 
-    <circle cx="290" cy="-4" r="4" fill="#f7df1e"/>
+    <circle cx="290" cy="-4" r="3.5" fill="#f7df1e"/>
     <text x="300" y="0" class="fg">JavaScript 17%</text>
 
-    <circle cx="430" cy="-4" r="4" fill="#f34b7d"/>
-    <text x="440" y="0" class="fg">C++ 10%</text>
+    <circle cx="430" cy="-4" r="3.5" fill="#e34c26"/>
+    <text x="440" y="0" class="fg">HTML 10%</text>
 
-    <circle cx="530" cy="-4" r="4" fill="#dea584"/>
-    <text x="540" y="0" class="fg">Rust / Shaders 10%</text>
+    <circle cx="530" cy="-4" r="3.5" fill="#dea584"/>
+    <text x="540" y="0" class="fg">Rust / C++ 10%</text>
   </g>
 </g>
 
-<path d="M16 0V240M864 0V240" fill="none" stroke="#00d9ff" stroke-width="1.2"/>
+<path d="M16 0V230M864 0V230" fill="none" stroke="#00d9ff" stroke-width="1.2"/>
 </svg>
