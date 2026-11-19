@@ -5,7 +5,7 @@ BASE = Path("profile_repo/assets")
 LINKS_DIR = BASE / "links"
 LINKS_DIR.mkdir(parents=True, exist_ok=True)
 
-orbitron_b64 = Path("orbitron_b64.txt").read_text(encoding="utf-8").strip()
+orbitron_path = Path("orbitron_path.txt").read_text(encoding="utf-8").strip()
 
 COMMON_DEFS = """
 <defs>
@@ -16,32 +16,26 @@ COMMON_DEFS = """
 </defs>
 """
 
-COMMON_STYLE = f"""
+COMMON_STYLE = """
 <style>
-@font-face {{
-  font-family: 'Orbitron';
-  font-style: normal;
-  font-weight: 900;
-  src: url(data:font/woff2;base64,{orbitron_b64}) format('woff2');
-}}
-text {{ font-family: 'Fira Code', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }}
-.brand-orbitron {{ font-family: 'Orbitron', monospace, sans-serif; font-weight: 900; }}
-.dim {{ fill: #6272a4; }}
-.cy {{ fill: #00d9ff; }}
-.fg {{ fill: #f8f8f2; }}
-.gr {{ fill: #50fa7b; }}
-.pk {{ fill: #ff79c6; }}
-.pp {{ fill: #bd93f9; }}
-.yl {{ fill: #f1fa8c; }}
-@keyframes blink {{ 0%, 49% {{ opacity: 1; }} 50%, 100% {{ opacity: 0; }} }}
-@keyframes pulse {{ 0%, 100% {{ opacity: 1; }} 50% {{ opacity: .3; }} }}
-@keyframes gm {{ 0%, 92%, 100% {{ transform: translate(0,0); }} 93% {{ transform: translate(3px,-1px); }} 95% {{ transform: translate(-2px,1px); }} 97% {{ transform: translate(1px,0); }} }}
-@keyframes gc {{ 0%, 92%, 100% {{ transform: translate(0,0); }} 93% {{ transform: translate(-3px,1px); }} 95% {{ transform: translate(2px,-1px); }} 97% {{ transform: translate(-1px,0); }} }}
-.cursor {{ animation: blink 1.05s step-end infinite; }}
-.dot {{ animation: pulse 2s ease-in-out infinite; }}
-.gm {{ animation: gm 5s linear 1s infinite; }}
-.gc {{ animation: gc 5s linear 1s infinite; }}
-@media (prefers-reduced-motion: reduce) {{ * {{ animation: none !important; }} }}
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&amp;display=swap');
+text { font-family: 'Fira Code', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+.dim { fill: #6272a4; }
+.cy { fill: #00d9ff; }
+.fg { fill: #f8f8f2; }
+.gr { fill: #50fa7b; }
+.pk { fill: #ff79c6; }
+.pp { fill: #bd93f9; }
+.yl { fill: #f1fa8c; }
+@keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .3; } }
+@keyframes gm { 0%, 92%, 100% { transform: translate(0,0); } 93% { transform: translate(3px,-1px); } 95% { transform: translate(-2px,1px); } 97% { transform: translate(1px,0); } }
+@keyframes gc { 0%, 92%, 100% { transform: translate(0,0); } 93% { transform: translate(-3px,1px); } 95% { transform: translate(2px,-1px); } 97% { transform: translate(-1px,0); } }
+.cursor { animation: blink 1.05s step-end infinite; }
+.dot { animation: pulse 2s ease-in-out infinite; }
+.gm { animation: gm 5s linear 1s infinite; }
+.gc { animation: gc 5s linear 1s infinite; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
 </style>
 """
 
@@ -65,12 +59,12 @@ def generate_header():
 <!-- Terminal Command Prompt -->
 <text x="52" y="94" class="dim" font-size="14.5"><tspan class="gr">$</tspan> whoami</text>
 
-<!-- Embedded Base64 Orbitron Brand Title - NO SPACES -->
-<g class="brand-orbitron" letter-spacing="2" font-size="46">
-  <text x="52" y="156" fill="#00d9ff" opacity=".35" filter="url(#glow)">QuantumTechCoder</text>
-  <g class="gm"><text x="54" y="156" fill="#ff79c6" opacity=".75">QuantumTechCoder</text></g>
-  <g class="gc"><text x="50" y="156" fill="#00d9ff" opacity=".85">QuantumTechCoder</text></g>
-  <text x="52" y="156" fill="#f8f8f2">QuantumTechCoder</text>
+<!-- Pure Vector Orbitron Geometry - 100% Guaranteed Native Rendering -->
+<g transform="translate(52, 154)">
+  <path d="{orbitron_path}" fill="#00d9ff" opacity=".35" filter="url(#glow)"/>
+  <g class="gm"><path d="{orbitron_path}" fill="#ff79c6" opacity=".75"/></g>
+  <g class="gc"><path d="{orbitron_path}" fill="#00d9ff" opacity=".85"/></g>
+  <path d="{orbitron_path}" fill="#ffffff"/>
 </g>
 
 <!-- Bullet Subtitles -->
@@ -105,21 +99,17 @@ def generate_section(title: str, cmd: str, h: int = 90):
 </svg>"""
 
 def generate_link_btn(icon: str, label: str, sub: str, pos: str, color: str = "#00d9ff"):
-    # 5 buttons of width 176 each (5 * 176 = 880)
-    # The left rail is at x=16, right rail at 176*4 + 160 = 864
     rail_svg = ""
     bg_svg = ""
     bx = 4
     bw = 168
 
     if pos == "first":
-        # x=0..16 is TRANSPARENT, background starts at 16
         bg_svg = '<rect x="16" y="0" width="160" height="72" fill="#03040a"/>'
         rail_svg = '<path d="M16 0V72" fill="none" stroke="#00d9ff" stroke-width="1.2"/>'
         bx = 20
         bw = 152
     elif pos == "last":
-        # x=160..176 is TRANSPARENT, background ends at 160
         bg_svg = '<rect x="0" y="0" width="160" height="72" fill="#03040a"/>'
         rail_svg = '<path d="M160 0V72" fill="none" stroke="#00d9ff" stroke-width="1.2"/>'
         bx = 4
@@ -140,9 +130,6 @@ def generate_link_btn(icon: str, label: str, sub: str, pos: str, color: str = "#
 </svg>"""
 
 def generate_project_card(title: str, badge: str, desc1: str, desc2: str, tags: list, side: str, color: str = "#00d9ff"):
-    # 2 cards of 440 each (2 * 440 = 880)
-    # Left card: x=0..16 TRANSPARENT, rail at 16
-    # Right card: x=424..440 TRANSPARENT, rail at 424 (440+424=864)
     rail_svg = ""
     bg_svg = ""
     bx = 6
@@ -188,78 +175,7 @@ def generate_project_card(title: str, badge: str, desc1: str, desc2: str, tags: 
 {rail_svg}
 </svg>"""
 
-def generate_stack_panel():
-    # Technical Arsenal completely enclosed inside the 880px boundary
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="880" height="250" viewBox="0 0 880 250" role="img">
-{COMMON_DEFS}
-{COMMON_STYLE}
-<path d="M16 0V250M864 0V250" fill="none" stroke="#00d9ff" stroke-width="2.5" opacity=".35" filter="url(#glow)"/>
-<rect x="16" y="0" width="848" height="250" fill="#03040a"/>
-<rect x="16" y="0" width="848" height="250" fill="url(#grid)"/>
-
-<!-- Section Title -->
-<line x1="52" y1="16" x2="160" y2="16" stroke="#00d9ff" stroke-width="2" filter="url(#sglow)"/>
-<text x="52" y="44" class="fg" font-weight="bold" font-size="18" letter-spacing="1">Technical Arsenal &amp; Weapons</text>
-<text x="52" y="68" class="dim" font-size="12.5"><tspan class="gr">$</tspan> cat ~/weapons.json</text>
-
-<!-- Category Rows Inside Rails -->
-<g transform="translate(36, 86)">
-  <!-- Systems & Kernel -->
-  <text x="16" y="20" class="cy" font-size="11" font-weight="bold">SYSTEMS &amp; KERNEL:</text>
-  <g transform="translate(160, 4)" font-size="11">
-    <rect x="0" y="0" width="65" height="22" rx="4" fill="#08101e" stroke="#25354e" stroke-width="1"/><text x="32" y="15" text-anchor="middle" fill="#f8f8f2">Linux</text>
-    <rect x="73" y="0" width="65" height="22" rx="4" fill="#08101e" stroke="#25354e" stroke-width="1"/><text x="105" y="15" text-anchor="middle" fill="#f8f8f2">Debian</text>
-    <rect x="146" y="0" width="60" height="22" rx="4" fill="#08101e" stroke="#25354e" stroke-width="1"/><text x="176" y="15" text-anchor="middle" fill="#f8f8f2">Arch</text>
-    <rect x="214" y="0" width="60" height="22" rx="4" fill="#08101e" stroke="#25354e" stroke-width="1"/><text x="244" y="15" text-anchor="middle" fill="#00f7ff">Kali</text>
-    <rect x="282" y="0" width="70" height="22" rx="4" fill="#08101e" stroke="#25354e" stroke-width="1"/><text x="317" y="15" text-anchor="middle" fill="#f8f8f2">Docker</text>
-    <rect x="360" y="0" width="85" height="22" rx="4" fill="#08101e" stroke="#25354e" stroke-width="1"/><text x="402" y="15" text-anchor="middle" fill="#50fa7b">Kubernetes</text>
-    <rect x="453" y="0" width="75" height="22" rx="4" fill="#08101e" stroke="#25354e" stroke-width="1"/><text x="490" y="15" text-anchor="middle" fill="#ff79c6">Arduino</text>
-    <rect x="536" y="0" width="105" height="22" rx="4" fill="#08101e" stroke="#25354e" stroke-width="1"/><text x="588" y="15" text-anchor="middle" fill="#f1fa8c">Raspberry Pi</text>
-  </g>
-
-  <!-- Core Languages -->
-  <text x="16" y="58" class="gr" font-size="11" font-weight="bold">LANGUAGES &amp; RUNTIMES:</text>
-  <g transform="translate(160, 42)" font-size="11">
-    <rect x="0" y="0" width="85" height="22" rx="4" fill="#08101e" stroke="#25354e" stroke-width="1"/><text x="42" y="15" text-anchor="middle" fill="#3178c6">TypeScript</text>
-    <rect x="93" y="0" width="80" height="22" rx="4" fill="#08101e" stroke="#25354e" stroke-width="1"/><text x="133" y="15" text-anchor="middle" fill="#f7df1e">JavaScript</text>
-    <rect x="181" y="0" width="65" height="22" rx="4" fill="#08101e" stroke="#25354e" stroke-width="1"/><text x="213" y="15" text-anchor="middle" fill="#3572A5">Python</text>
-    <rect x="254" y="0" width="55" height="22" rx="4" fill="#08101e" stroke="#25354e" stroke-width="1"/><text x="281" y="15" text-anchor="middle" fill="#dea584">Rust</text>
-    <rect x="317" y="0" width="55" height="22" rx="4" fill="#08101e" stroke="#25354e" stroke-width="1"/><text x="344" y="15" text-anchor="middle" fill="#f34b7d">C++</text>
-    <rect x="380" y="0" width="55" height="22" rx="4" fill="#08101e" stroke="#25354e" stroke-width="1"/><text x="407" y="15" text-anchor="middle" fill="#e76f00">Java</text>
-    <rect x="443" y="0" width="60" height="22" rx="4" fill="#08101e" stroke="#25354e" stroke-width="1"/><text x="473" y="15" text-anchor="middle" fill="#512bd4">.NET</text>
-    <rect x="511" y="0" width="65" height="22" rx="4" fill="#08101e" stroke="#25354e" stroke-width="1"/><text x="543" y="15" text-anchor="middle" fill="#654ff0">Wasm</text>
-  </g>
-
-  <!-- Web, Edge & Cloud -->
-  <text x="16" y="96" class="pk" font-size="11" font-weight="bold">WEB, EDGE &amp; CLOUD:</text>
-  <g transform="translate(160, 80)" font-size="11">
-    <rect x="0" y="0" width="65" height="22" rx="4" fill="#08101e" stroke="#25354e" stroke-width="1"/><text x="32" y="15" text-anchor="middle" fill="#61dafb">React</text>
-    <rect x="73" y="0" width="65" height="22" rx="4" fill="#08101e" stroke="#25354e" stroke-width="1"/><text x="105" y="15" text-anchor="middle" fill="#f8f8f2">Next.js</text>
-    <rect x="146" y="0" width="65" height="22" rx="4" fill="#08101e" stroke="#25354e" stroke-width="1"/><text x="178" y="15" text-anchor="middle" fill="#ff3e00">Svelte</text>
-    <rect x="219" y="0" width="75" height="22" rx="4" fill="#08101e" stroke="#25354e" stroke-width="1"/><text x="256" y="15" text-anchor="middle" fill="#38bdf8">Tailwind</text>
-    <rect x="302" y="0" width="70" height="22" rx="4" fill="#08101e" stroke="#25354e" stroke-width="1"/><text x="337" y="15" text-anchor="middle" fill="#f8f8f2">Three.js</text>
-    <rect x="380" y="0" width="85" height="22" rx="4" fill="#08101e" stroke="#25354e" stroke-width="1"/><text x="422" y="15" text-anchor="middle" fill="#f38020">Cloudflare</text>
-    <rect x="473" y="0" width="85" height="22" rx="4" fill="#08101e" stroke="#25354e" stroke-width="1"/><text x="515" y="15" text-anchor="middle" fill="#336791">PostgreSQL</text>
-    <rect x="566" y="0" width="75" height="22" rx="4" fill="#08101e" stroke="#25354e" stroke-width="1"/><text x="603" y="15" text-anchor="middle" fill="#47a248">MongoDB</text>
-  </g>
-
-  <!-- AI & Reverse Engineering -->
-  <text x="16" y="134" class="yl" font-size="11" font-weight="bold">AI &amp; REVERSE ENG:</text>
-  <g transform="translate(160, 118)" font-size="11">
-    <rect x="0" y="0" width="70" height="22" rx="4" fill="#08101e" stroke="#25354e" stroke-width="1"/><text x="35" y="15" text-anchor="middle" fill="#f8f8f2">Ollama</text>
-    <rect x="78" y="0" width="105" height="22" rx="4" fill="#08101e" stroke="#25354e" stroke-width="1"/><text x="130" y="15" text-anchor="middle" fill="#00ff9f">Local LLMs</text>
-    <rect x="191" y="0" width="65" height="22" rx="4" fill="#08101e" stroke="#25354e" stroke-width="1"/><text x="223" y="15" text-anchor="middle" fill="#bd93f9">NumPy</text>
-    <rect x="264" y="0" width="95" height="22" rx="4" fill="#08101e" stroke="#25354e" stroke-width="1"/><text x="311" y="15" text-anchor="middle" fill="#ff79c6">Nmap/Zenmap</text>
-    <rect x="367" y="0" width="65" height="22" rx="4" fill="#08101e" stroke="#25354e" stroke-width="1"/><text x="399" y="15" text-anchor="middle" fill="#f8f8f2">Wireshark</text>
-    <rect x="440" y="0" width="80" height="22" rx="4" fill="#08101e" stroke="#25354e" stroke-width="1"/><text x="480" y="15" text-anchor="middle" fill="#00f7ff">Ghidra</text>
-    <rect x="528" y="0" width="85" height="22" rx="4" fill="#08101e" stroke="#25354e" stroke-width="1"/><text x="570" y="15" text-anchor="middle" fill="#50fa7b">Antigravity</text>
-  </g>
-</g>
-
-<path d="M16 0V250M864 0V250" fill="none" stroke="#00d9ff" stroke-width="1.2"/>
-</svg>"""
-
-def generate_crypto_tip_jar():
+def generate_tip_me_up():
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="880" height="320" viewBox="0 0 880 320" role="img">
 {COMMON_DEFS}
 {COMMON_STYLE}
@@ -270,7 +186,7 @@ def generate_crypto_tip_jar():
 <!-- Frame inside x=36 to x=844 -->
 <rect x="36" y="16" width="808" height="288" rx="10" fill="#060913" stroke="#00d9ff" stroke-width="1.2" stroke-opacity=".7"/>
 
-<text x="60" y="52" fill="#ffffff" font-weight="bold" font-size="17">⚡ CRYPTO TIP JAR // MULTI-CHAIN EVM</text>
+<text x="60" y="52" fill="#ffffff" font-weight="bold" font-size="17">⚡ TIP ME UP! // MULTI-CHAIN CRYPTO &amp; COFFEE</text>
 <text x="814" y="52" text-anchor="end" class="gr" font-size="11">● READY FOR TX</text>
 <circle class="dot" cx="704" cy="48" r="3.5" fill="#50fa7b"/>
 
@@ -341,17 +257,17 @@ def generate_footer():
 (BASE / "header.svg").write_text(generate_header(), encoding="utf-8")
 (BASE / "links.svg").write_text(generate_section("Links", "cat ~/.links"), encoding="utf-8")
 
-# 5 Link buttons with boundary rail alignment
+# 5 Link buttons
 (LINKS_DIR / "web.svg").write_text(generate_link_btn("🌐", "Website", "quantumtechcoder", "first", "#00d9ff"), encoding="utf-8")
 (LINKS_DIR / "dev.svg").write_text(generate_link_btn("✍️", "DEV.to", "Articles &amp; Posts", "mid", "#00ff9f"), encoding="utf-8")
 (LINKS_DIR / "gh.svg").write_text(generate_link_btn("💻", "GitHub", "@QuantumTechCoder", "mid", "#bd93f9"), encoding="utf-8")
 (LINKS_DIR / "discord.svg").write_text(generate_link_btn("💬", "Discord", "quantumtechcoder", "mid", "#ff79c6"), encoding="utf-8")
-(LINKS_DIR / "vault.svg").write_text(generate_link_btn("⚡", "Tip Jar", "Crypto EVM", "last", "#f1fa8c"), encoding="utf-8")
+(LINKS_DIR / "vault.svg").write_text(generate_link_btn("☕", "Tip Me Up!", "Crypto &amp; Coffee", "last", "#f1fa8c"), encoding="utf-8")
 
 (BASE / "telemetry.svg").write_text(generate_section("Live Telemetry &amp; Stats", "sysctl -a telemetry"), encoding="utf-8")
 (BASE / "projects.svg").write_text(generate_section("Featured Systems &amp; Projects", "ls -la ~/projects"), encoding="utf-8")
 
-# Project cards with boundary rail alignment
+# Project cards
 (BASE / "card-fractals.svg").write_text(generate_project_card(
     "FantasticFractals", "60 FPS WEBGL",
     "Real-time mathematical fractal visualizer (WebGL 2.0 &amp; React)",
@@ -380,9 +296,9 @@ def generate_footer():
     ["Next.js", "Cloudflare D1", "Prisma", "Geist"], "right", "#ff79c6"
 ), encoding="utf-8")
 
-(BASE / "stack.svg").write_text(generate_stack_panel(), encoding="utf-8")
-(BASE / "vault.svg").write_text(generate_section("Crypto Tip Jar", "tip --crypto --evm"), encoding="utf-8")
-(BASE / "crypto_vault.svg").write_text(generate_crypto_tip_jar(), encoding="utf-8")
+(BASE / "stack.svg").write_text(generate_section("Technical Arsenal &amp; Stack", "cat ~/weapons.json"), encoding="utf-8")
+(BASE / "vault.svg").write_text(generate_section("Tip Me Up!", "tip --coffee --crypto"), encoding="utf-8")
+(BASE / "crypto_vault.svg").write_text(generate_tip_me_up(), encoding="utf-8")
 (BASE / "footer.svg").write_text(generate_footer(), encoding="utf-8")
 
-print("All profile assets regenerated cleanly with embedded Orbitron and aligned boundary rails!")
+print("All profile assets generated with exact Orbitron vector curves, Tip Me Up! branding, and perfect alignment!")

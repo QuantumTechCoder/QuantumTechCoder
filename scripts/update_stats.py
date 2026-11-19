@@ -76,7 +76,7 @@ if TOKEN:
 
 now_str = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
 
-# 4. Generate assets/stats.svg
+# 4. Generate assets/stats.svg with fixed bounds
 stats_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="880" height="230" viewBox="0 0 880 230" role="img">
 <defs>
 <pattern id="statGrid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#00d9ff" stroke-opacity=".05"/></pattern>
@@ -93,7 +93,7 @@ text {{ font-family: 'Fira Code', 'JetBrains Mono', monospace; }}
 .yl {{ fill: #f1fa8c; }}
 </style>
 
-<!-- Outer Rails and Transparent Margin -->
+<!-- Outer Rails and Transparent Margins (x=0..16 & x=864..880 are transparent) -->
 <path d="M16 0V230M864 0V230" fill="none" stroke="#00d9ff" stroke-width="2.5" opacity=".35" filter="url(#sglow)"/>
 <rect x="16" y="0" width="848" height="230" fill="#03040a"/>
 <rect x="16" y="0" width="848" height="230" fill="url(#statGrid)"/>
@@ -102,27 +102,27 @@ text {{ font-family: 'Fira Code', 'JetBrains Mono', monospace; }}
 <g transform="translate(36, 14)">
   <!-- Box 1: Contributions -->
   <rect x="0" y="0" width="190" height="92" rx="8" fill="#060a14" stroke="#00d9ff" stroke-width="1.2" stroke-opacity=".7"/>
-  <text x="18" y="28" class="dim" font-size="10.5">CONTRIBUTIONS</text>
-  <text x="18" y="66" fill="#00d9ff" font-weight="bold" font-size="26">{contributions:,}</text>
-  <text x="18" y="82" fill="#6272a4" font-size="9.5">ALL-TIME CONTRIBUTIONS</text>
+  <text x="18" y="26" class="dim" font-size="10.5">CONTRIBUTIONS</text>
+  <text x="18" y="60" fill="#00d9ff" font-weight="bold" font-size="24">{contributions:,}</text>
+  <text x="18" y="78" fill="#6272a4" font-size="9.5">ALL-TIME CONTRIBUTIONS</text>
 
   <!-- Box 2: Commits & PRs -->
   <rect x="206" y="0" width="190" height="92" rx="8" fill="#060a14" stroke="#50fa7b" stroke-width="1.2" stroke-opacity=".7"/>
-  <text x="224" y="28" class="dim" font-size="10.5">COMMITS &amp; PRS</text>
-  <text x="224" y="66" fill="#50fa7b" font-weight="bold" font-size="26">{commits} / {prs} PRs</text>
-  <text x="224" y="82" fill="#6272a4" font-size="9.5">PRODUCTION PIPELINE</text>
+  <text x="224" y="26" class="dim" font-size="10.5">COMMITS &amp; PRS</text>
+  <text x="224" y="60" fill="#50fa7b" font-weight="bold" font-size="18.5">{commits} Commits · {prs} PRs</text>
+  <text x="224" y="78" fill="#6272a4" font-size="9.5">PRODUCTION PIPELINE</text>
 
   <!-- Box 3: Streak -->
   <rect x="412" y="0" width="190" height="92" rx="8" fill="#060a14" stroke="#ff79c6" stroke-width="1.2" stroke-opacity=".7"/>
-  <text x="430" y="28" class="dim" font-size="10.5">ACTIVITY VELOCITY</text>
-  <text x="430" y="66" fill="#ff79c6" font-weight="bold" font-size="26">🔥 {streak_days} Days</text>
-  <text x="430" y="82" fill="#6272a4" font-size="9.5">ACTIVE STREAK</text>
+  <text x="430" y="26" class="dim" font-size="10.5">ACTIVITY VELOCITY</text>
+  <text x="430" y="60" fill="#ff79c6" font-weight="bold" font-size="20">🔥 {streak_days} Days Streak</text>
+  <text x="430" y="78" fill="#6272a4" font-size="9.5">ACTIVE STREAK</text>
 
-  <!-- Box 4: Stars & Repos -->
+  <!-- Box 4: Stars & Repos (Compact, Guaranteed Inside Box) -->
   <rect x="618" y="0" width="190" height="92" rx="8" fill="#060a14" stroke="#f1fa8c" stroke-width="1.2" stroke-opacity=".7"/>
-  <text x="636" y="28" class="dim" font-size="10.5">REPOSITORIES</text>
-  <text x="636" y="66" fill="#f1fa8c" font-weight="bold" font-size="26">⭐ {total_stars} / {public_repos} Repos</text>
-  <text x="636" y="82" fill="#6272a4" font-size="9.5">PUBLIC OPEN-SOURCE</text>
+  <text x="636" y="26" class="dim" font-size="10.5">REPOSITORIES</text>
+  <text x="636" y="60" fill="#f1fa8c" font-weight="bold" font-size="18">⭐ {total_stars} Stars · {public_repos} Repos</text>
+  <text x="636" y="78" fill="#6272a4" font-size="9.5">PUBLIC OPEN-SOURCE</text>
 </g>
 
 <!-- Languages Breakdown Bar -->
